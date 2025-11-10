@@ -46,7 +46,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Homepage - para pasar el punto 7 de FCC
 app.get('/', (req, res) => {
-  res.sendFile(path.join(__dirname, 'views', 'index.html'));
+  res.sendFile(path.join(__dirname, 'views', 'index.html'));
 });
 
 // API routes
@@ -54,8 +54,8 @@ app.use('/api/stock-prices', stockRoutes);
 
 // Solo levantar server si no estamos corriendo tests
 if (process.env.NODE_ENV !== 'test') {
-  const PORT = process.env.PORT || 3000;
-  app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
+  const PORT = process.env.PORT || 3000;
+  app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
 }
 
 // Exportar app para FCC tests
